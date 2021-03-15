@@ -1,6 +1,22 @@
 from collections import deque
 
-# Come back to this one later, not sure if I understand the problem entirely
+
+def solution(H): # O(N), 100% on codility
+    count = 0
+    stack = deque()
+
+    for i in H:
+        while stack:
+            if stack[-1] > i:
+                stack.pop()
+            else:
+                break
+        if not stack or stack[-1] != i:
+            count += 1
+            stack.append(i)
+
+    return count
+
 
 def add_to_blocks(blocks, new_blocks):
     while new_blocks:
@@ -24,7 +40,7 @@ def block_found(blocks, current):
     return False
 
 
-def solution(H):
+def first_solution(H): # Bad solution, but the idea was there... reworked in solution(H)
     blocks = deque()
     count = 0
 
