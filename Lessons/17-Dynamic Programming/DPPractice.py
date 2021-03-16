@@ -40,7 +40,7 @@ def frog(S, k):
 
 
 if __name__ == '__main__':
-    print(dynamic_coin_changing_fulldp([1, 3, 4], 54))
-    print(dynamic_coin_changing([1, 3, 4], 54))
+    print(dynamic_coin_changing_fulldp([1, 3, 4], 8))
+    print(dynamic_coin_changing([1, 3, 4], 8))
 
     print(frog([1, 2, 3], 25))
